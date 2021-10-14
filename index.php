@@ -11,7 +11,7 @@
 <h1>Palindrome</h1>
 <?php
 
-$inputt = "rat";
+// $inputt = "rat";
 // //custom rev
 // $arr = str_split($inputt);
 
