@@ -92,15 +92,15 @@ done('abzaba');
 <h1>Third</h1>
 <?php
 
+//without loop first half
+function third($arrey){
+    rsort($arrey); 
+    $ssum = $arrey[0]+$arrey[1];
+    echo $ssum;
+}
+third(array(1,2,3,4,5,6,7,8,1,9,14,18));
 
-// function third($arrey){
-//     rsort($arrey); 
-//     $ssum = $arrey[0]+$arrey[1];
-//     echo $ssum;
-// }
-// third(array(1,2,3,4,5,6,7,8,1,9,14,18));
-
-
+//with loop
 
 $arr = array(4, 6, 8, 10, 12, 14, 16); 
 $counted = count($arr);
