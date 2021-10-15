@@ -58,6 +58,8 @@ function third($arr){
      
     $counted = count($arr);
     $new =[];
+    //final resly array
+    $result_array=[];
     for($i=0;$i<$counted;$i++){
         for($j=$i+1;$j<$counted;$j++){
             array_push($new, $arr[$i] + $arr[$j]);
@@ -70,22 +72,28 @@ function third($arr){
     ?>
     <br>
     <?php
+    
     //spliting evey value than merge into one array
     foreach ($new as $value) {
-        array_push($final_array,str_split($value));
+        if (strlen($value) == 2){
+            array_push($final_array,str_split($value));
+        }else{
+            array_push($result_array,$value);
+        }
     }
     $ultimate =call_user_func_array('array_merge', $final_array);
     ?>
     <br>
     <?php
     $final_count = count($ultimate);
-    $result_array=[];
     for($i=0,$j=1;$i,$j<$final_count;$i+=2,$j+=2){ 
         array_push($result_array, $ultimate[$i] + $ultimate[$j]);
     }
     echo 'The max sum of all previous result is : '.max($result_array);
     }
-third(array(4, 6, 8, 10, 12, 14));
+    
+    
+third(array(8, 10, 12, 14));
     
 
 ?>
