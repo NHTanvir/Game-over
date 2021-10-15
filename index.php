@@ -58,8 +58,6 @@ function third($arr){
      
     $counted = count($arr);
     $new =[];
-    //final resly array
-    $result_array=[];
     for($i=0;$i<$counted;$i++){
         for($j=$i+1;$j<$counted;$j++){
             array_push($new, $arr[$i] + $arr[$j]);
@@ -68,11 +66,12 @@ function third($arr){
     }
     //print_r($new);
     echo 'The max sum of every Two Number is number is : '.max($new);
-    $final_array=[];
     ?>
     <br>
     <?php
-    
+    $final_array=[];
+    //final result array
+    $result_array=[];
     //spliting evey value than merge into one array
     foreach ($new as $value) {
         if (strlen($value) == 2){
