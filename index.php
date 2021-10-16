@@ -58,7 +58,7 @@ function third($arr){
      
     $counted = count($arr);
     $new =[];
-    //final resly array
+    //final result array
     $result_array=[];
     for($i=0;$i<$counted;$i++){
         for($j=$i+1;$j<$counted;$j++){
@@ -72,8 +72,7 @@ function third($arr){
     ?>
     <br>
     <?php
-    
-    //spliting evey value than merge into one array
+    //seperating the digits but putting each result into diffrent sub array
     foreach ($new as $value) {
         $int_length =strlen($value);
         $fin_length = $int_length-1;
