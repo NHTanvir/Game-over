@@ -10,25 +10,25 @@
     
 <h1>Palindrome</h1>
 <?php
+$input = "abcba";
 
-$test = "DAD";
-function Palindrome($string){ 
-    if (strrev($string) == $string){ 
-        return 1; 
+function Palindrome($input){ 
+    
+    $reversed="";
+    $splited =str_split($input);
+    $t_lengt=count($splited);
+    for ($y=$t_lengt-1; $y >-1 ; $y--) { 
+        $reversed.=$splited[$y];
+}
+    if ($input== $reversed){ 
+        echo "Palindrome";
     }
     else{
-        return 0;
+        echo "Not a Palindrome";
     }
 } 
+Palindrome($input);
  
-
-
-if(Palindrome($test)){ 
-    echo "Palindrome"; 
-}
-else { 
-echo "Not a Palindrome"; 
-}
 ?>
 <h1>Second</h1>
 <?php
