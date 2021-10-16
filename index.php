@@ -37,10 +37,10 @@ function done($main){
 
     $rev = strrev($main);
     $counted =strlen($main);
-    $half =   round($counted /2) -2;  
-    $orginal= substr($rev,$half+2);
+    $half =   round($counted /2);  
+    $orginal= substr($rev,$half);
     $first = strrev($orginal);
-    $last = substr($main,$half+2);
+    $last = substr($main,$half);
         if ($first == $last) {
             echo "Matched";
         }else{
